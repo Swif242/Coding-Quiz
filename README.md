@@ -1,2 +1,2 @@
-# HomeWork-4
+# Homework-4
 Coding Quiz Game
