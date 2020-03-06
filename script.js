@@ -1,7 +1,9 @@
 var quizQuest = document.getElementById("question");
 var quizOpt = document.getElementById("options");
 var next = document.getElementById("next");
-
+// var totalSeconds = workMinutesInput;
+// var secondsElapsed;
+// var interval;
 
 
 
@@ -56,10 +58,28 @@ var questions = [
 function startGame() {
     event.preventDefault();
     for (i = 0; i < questions.length; i++) {
-        quizQuest.textContent= questions[i];
-    }
-console.log(question);
+        quizQuest.textContent = JSON.stringify(questions[i]);
+      
+
+    };
+
+   
 };
+
+// var seconds = setInterval(function(){
+//     if (parseInt(secondsDisplay.textContent) === 0) {
+//       secondsDisplay.textContent = 59
+//       minutesDisplay.textContent -= 1
+//     } else {
+//       secondsDisplay.textContent -= 1;
+
+//     }
+
+
+//     // if(secondsDisplay== 0){
+    
+//     // }
+//   }, 1000);
 
 
 next.addEventListener("click", startGame);
