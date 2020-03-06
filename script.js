@@ -1,6 +1,9 @@
 var quizQuest = document.getElementById("question");
-var quizOpt = document.getElementById("options");
+var quizOpt1 = document.getElementById("option1");
+var quizOpt2 = document.getElementById("option2");
+var quizOpt3 = document.getElementById("option3");
 var next = document.getElementById("next");
+var currentQuestion = 0;
 // var totalSeconds = workMinutesInput;
 // var secondsElapsed;
 // var interval;
@@ -57,13 +60,14 @@ var questions = [
 
 function startGame() {
     event.preventDefault();
-    for (i = 0; i < questions.length; i++) {
-        quizQuest.textContent = JSON.stringify(questions[i]);
-      
 
-    };
 
-   
+quizQuest.textContent = questions[currentQuestion].question;
+quizOpt1.textContent = questions[currentQuestion].option1;
+quizOpt2.textContent = questions[currentQuestion].option2;
+quizOpt3.textContent = questions[currentQuestion].option3;  
+
+   currentQuestion += 1;
 };
 
 // var seconds = setInterval(function(){
@@ -76,9 +80,9 @@ function startGame() {
 //     }
 
 
-//     // if(secondsDisplay== 0){
+//     
     
-//     // }
+//     
 //   }, 1000);
 
 
