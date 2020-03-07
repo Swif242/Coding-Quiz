@@ -5,7 +5,7 @@ var quizOpt3 = document.getElementById("option3");
 var next = document.getElementById("next");
 var start = document.getElementById("start");
 var currentQuestion = 0;
-var answer = [answer];
+var answer = "";
 // // Timer and High Score Variables
 // var timer = document.getElementById("timer");
 // var btn_submit_initials = document.getElementById("btn_submit_initials");
@@ -67,10 +67,10 @@ function startGame() {
     event.preventDefault();
 
 
-    quizQuest.textContent = questions[currentQuestion].question;
-    quizOpt1.textContent = questions[currentQuestion].option1;
-    quizOpt2.textContent = questions[currentQuestion].option2;
-    quizOpt3.textContent = questions[currentQuestion].option3;
+    quizQuest.textContent = questions[0].question;
+    quizOpt1.textContent = questions[0].option1;
+    quizOpt2.textContent = questions[0].option2;
+    quizOpt3.textContent = questions[0].option3;
 
 
 
@@ -144,7 +144,7 @@ next.addEventListener("click", nextQuest);
 
 // option1 click event
 option1.addEventListener("click", function () {
-    if (option1 === questions.answer) {
+    if (answer === questions[0].answer) {
         score += 1;
         alert("correct")
     }
@@ -152,7 +152,7 @@ option1.addEventListener("click", function () {
         setTime += -10
         alert("wrong")
     }
-    
+    return answer;
 });
 
 // option2 click event
