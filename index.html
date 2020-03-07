@@ -12,32 +12,40 @@
 </head>
 
 <body>
-    <div id="container">
-        <div class="row">
-            <div class="col-12"></div>
-        </div>
-        <div class="row">
-            <div class="col-3"></div>
-            <div class="col-6">
-                <div id="quest-container" class="card" style="width: 18rem;">
-
-                    <div class="card-body">
-                        <h5 class="card-title">Question 1</h5>
-                        <p id="question" class="card-text"> </p>
-                    </div>
-                    <div id="options">
-                        <input id="option1" class="list-group-item" type="radio"><span></span></input>
-                        <input id="option2" class="list-group-item" type="radio"><span></span></input>
-                        <input id="option3" class="list-group-item" type="radio"><span></span></input>
-                    </div>
-                    <div class="card-body">
-                        <button id="next">Next</button>
-                        <!-- <a href="#" class="card-link">Another link</a> -->
-                    </div>
-                </div>
-                <div class=" col-3"></div>
+    <div id="container-fluid">
+        <div class="row" style="height: 140px;">
+            <div class="col" class="nav">
+                <nav id="time-box" class="navbar  navbar-light bg-light" style="margin-left: auto; margin-right: auto; border-radius: 15%; height: 65px; width: 120px;" >
+               <div id="timer">Time: 60</div>
+               <div id="score">Score:</div>
+              </nav>
             </div>
         </div>
+        <div class="row" class="overflow-hidden" style="height: auto;">
+            <div class="col"></div>
+            <div class="col">
+                <div id="quest-container" class="card"  >
+
+                    <div class="card-body">
+                        <h5 id="card-title" class="card-title">Code Quiz!</h5>
+                        <p id="question" class="card-text"> Push next to start the game</p>
+                    </div>
+                    <div id="options">
+                        <div  class="list-group-item" ><p id="option1">Option1</p></div>
+                        <div  class="list-group-item" ><p id="option2">Option2</p></div>
+                        <div  class="list-group-item" ><p id="option3">Option3</p></div>
+                    </div>
+                    <div class="card-body">
+                         <button id="start">Start Game</button>
+                        <button id="next">Next</button>
+                       
+                    </div>
+                </div>
+            </div>
+             <div class="col"></div>
+        </div>
+        <div class="row" class="overflow-hidden" style="height:100px;">
+        <div class="col"></div></div>
     </div>
 
     </div>
