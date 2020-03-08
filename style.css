@@ -3,6 +3,14 @@ body{
     
 };
 
+.initials{
+    display: none;
+}
+
+.start-hidden{
+    display: none;
+}
+
 
 /* timer/score box */
 nav{
