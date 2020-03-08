@@ -15,43 +15,59 @@
     <div id="container-fluid">
         <div class="row" style="height: 140px;">
             <div class="col" class="nav">
-                <nav id="time-box" class="navbar  navbar-light bg-light" style="margin-left: auto; margin-right: auto; border-radius: 15%; height: 65px; width: 120px;" >
-               <div >Time: </div><div id="timer">60 </div>
-               <div >Score:</div><div id="score">0</div>
-              </nav>
+                <nav id="time-box" class="navbar  navbar-light bg-light"
+                    style="margin-left: auto; margin-right: auto; border-radius: 15%; height: 65px; width: 120px;">
+                    <div>Time: </div>
+                    <div id="timer">60 </div>
+                    <div>Score:</div>
+                    <div id="score">0</div>
+                </nav>
             </div>
         </div>
         <div class="row" class="overflow-hidden" style="height: auto;">
-            <div class="col"></div>
             <div class="col">
-                <div id="quest-container" class="card"  >
+                <p id="quizscore" style="background-color: lightgray; text-align: center;"> </p>
+            </div>
+            <div class="col">
+                <div id="quest-container" class="card">
 
                     <div class="card-body">
                         <h5 id="card-title" class="card-title">Code Quiz!</h5>
-                        <p id="question" style="font-weight: bold; text-decoration: underline;"> Push next to start the game</p>
+                        <p id="question" style="font-weight: bold; text-decoration: underline;"> Push next to start the
+                            game</p>
                     </div>
                     <div id="options">
-                        <div  class="list-group-item" ><p id="option1">Option1</p></div>
-                        <div  class="list-group-item" ><p id="option2">Option2</p></div>
-                        <div  class="list-group-item" ><p id="option3">Option3</p></div>
+                        <div class="list-group-item">
+                            <p id="option1">Option1</p>
+                        </div>
+                        <div class="list-group-item">
+                            <p id="option2">Option2</p>
+                        </div>
+                        <div class="list-group-item">
+                            <p id="option3">Option3</p>
+                        </div>
                     </div>
                     <div class="card-body">
-                         <button id="start">Start Game</button>
+                        <button id="start">Start Game</button>
                         <button id="next">Next</button>
-                       
+
                     </div>
                 </div>
             </div>
-             <div class="col"></div>
+            <div class="col"></div>
         </div>
-        <div class="row" class="overflow-hidden" style="height:100px;">
-            <p class="quiz" style="margin-left: auto; margin-right: auto; margin-top: 10px;">
-        
-            
+        <div class="row" class="overflow-hidden" style="height: auto;">
+            <p id="quiz" style="margin-left: auto; margin-right: auto; margin-top: 10px;">
             </p>
-            <p id="quizscore"> </p>
-        <!-- <div class="col"></div></div> -->
-    </div>
+
+            <div class="row" style="height: 25px;">
+                <div class="col">
+                    <p id="quizscore"> </p>
+                </div>
+            </div>
+
+            <!-- <div class="col"></div></div> -->
+        </div>
 
     </div>
 

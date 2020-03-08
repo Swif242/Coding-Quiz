@@ -6,8 +6,8 @@ var next = document.getElementById("next");
 var start = document.getElementById("start");
 var currentQuestion = 0;
 var answer = "";
-var score = 0;
 var scoreSpot = document.getElementById("score");
+var scoreLog = document.getElementById("quizscore");
 // // Timer and High Score Variables
 var timer = document.getElementById("timer");
 var btn_submit_initials = document.getElementById("btn_submit_initials");
@@ -96,7 +96,8 @@ function storeHighScore() {
     localStorage.setItem("initials", initials);
     playerInitialsAndScore = localStorage.getItem('initials') + ' - ' + score;
     highScores.push(playerInitialsAndScore);
-    document.getElementById("quizscore").innerText = highScores.toString();
+    scoreLog.innerText = highScores.toString();
+    scoreLog.creatElement("li").prepend( highScores );
 }
 
 function getInitials() {
