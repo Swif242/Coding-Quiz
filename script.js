@@ -4,6 +4,7 @@ var quizOpt2 = document.getElementById("option2");
 var quizOpt3 = document.getElementById("option3");
 var next = document.getElementById("next");
 var start = document.getElementById("start");
+var card = document.querySelector(".card-body");
 var currentQuestion = 0;
 var answer = "";
 var score = 0;
@@ -70,14 +71,11 @@ function startGame() {
     event.preventDefault();
     start.classList.add("start-hidden");
 
-    quizQuest.textContent = questions[0].question;
-    quizOpt1.textContent = questions[0].option1;
-    quizOpt2.textContent = questions[0].option2;
-    quizOpt3.textContent = questions[0].option3;
 
-
-
-
+    quizQuest.textContent = questions[currentQuestion].question;
+    quizOpt1.textContent = questions[currentQuestion].option1;
+    quizOpt2.textContent = questions[currentQuestion].option2;
+    quizOpt3.textContent = questions[currentQuestion].option3;
     startTimer();
 
 
@@ -103,17 +101,14 @@ function storeHighScore() {
 }
 
 function getInitials() {
-    stopTimer();
-    // initials.classList.remove(".initials");
-    gatherInitials =
-        "<input type='text' id='initials' value='' placeholder='Enter Your Initials Here'><button id='btn_submit_initials'>Submit</button>";
-    document.getElementById("quiz").innerHTML = gatherInitials;
+    stopTimer();             // trying to set inner html for initials after timer stops but get an error
+     
+    document.getElementById("quiz").innerHTML =  "<input type='text' id='initials' value='' placeholder='Enter Your Initials Here'><button id='btn_submit_initials'>Submit</button>";
+
     document.getElementById("btn_submit_initials").addEventListener("click", storeHighScore);
 }
 
 function startTimer() {
-    // document.getElementById("startQuiz").style.display = "none";
-    // displayQuestionAndAnswer(questionNumber);
     setTime = 60;
     interval = setInterval(function () {
         setTime += - 1;
@@ -140,16 +135,18 @@ next.addEventListener("click", nextQuest);
 option1.addEventListener("click", function (event) {
     var answer = event.target.textContent;
     if (answer === questions[currentQuestion].answer) {
+
         score += 1;
         setScore();
+
         alert("correct")
-        currentQuestion += 1;
+
     }
     else {
         setTime += -10
         alert("wrong")
     }
-
+    currentQuestion += 1;  // tried to go to next question after answering question but wont work
 });
 
 // option2 click event
@@ -157,15 +154,18 @@ option2.addEventListener("click", function (event) {
     var answer = event.target.textContent;
     if (answer === questions[currentQuestion].answer) {
         score += 1;
+
         setScore()
+        card.setAttribute("style", "backgroundColor: green");
         alert("correct")
-        currentQuestion += 1;
+
     }
     else {
         setTime += -10
+        card.setAttribute("style", "backgroundColor: red");
         alert("wrong")
     }
-
+    currentQuestion += 1; 
 });
 
 // option3 click event
@@ -173,13 +173,14 @@ option3.addEventListener("click", function (event) {
     var answer = event.target.textContent;
     if (answer === questions[currentQuestion].answer) {
         score += 1;
+
         setScore()
         alert("correct")
-        currentQuestion += 1;
+
     }
     else {
         setTime += -10
         alert("wrong")
     }
-
+    currentQuestion += 1;
 })

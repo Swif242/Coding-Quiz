@@ -2,11 +2,11 @@ body{
     background-color: lightslategray;
     
 };
-
-.initials{
+/* initial box starts out hidden until timer runs out */
+#initials{
     display: none;
 }
-
+/* start button hides after pressed */
 .start-hidden{
     display: none;
 }
@@ -31,7 +31,7 @@ nav{
 /* question container */
 #quest-container{
     width: 100%;
-    background-color: lightyellow;
+    background-color: blue;
     height: 400px;
     
 }
