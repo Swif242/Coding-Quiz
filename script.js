@@ -4,7 +4,6 @@ var quizOpt2 = document.getElementById("option2");
 var quizOpt3 = document.getElementById("option3");
 var next = document.getElementById("next");
 var start = document.getElementById("start");
-var card = document.querySelector(".card-body");
 var currentQuestion = 0;
 var answer = "";
 var score = 0;
@@ -144,6 +143,7 @@ option1.addEventListener("click", function (event) {
     }
     else {
         setTime += -10
+
         alert("wrong")
     }
     currentQuestion += 1;  // tried to go to next question after answering question but wont work
@@ -156,13 +156,11 @@ option2.addEventListener("click", function (event) {
         score += 1;
 
         setScore()
-        card.setAttribute("style", "backgroundColor: green");
         alert("correct")
 
     }
     else {
         setTime += -10
-        card.setAttribute("style", "backgroundColor: red");
         alert("wrong")
     }
     currentQuestion += 1; 
