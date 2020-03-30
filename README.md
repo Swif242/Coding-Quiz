@@ -1,4 +1,4 @@
-# Homework-4
+# Coding-Quiz
 Coding Quiz Game
 60 seconds to answer all questions
 each correct answer increases score 
