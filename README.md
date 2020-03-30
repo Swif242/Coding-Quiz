@@ -4,3 +4,6 @@ Coding Quiz Game
 each correct answer increases score 
 each wrog answer decreases time by 10 sec
 and the end of the quiz an input field will appear to store intiials and score
+
+
+Deployed  https://swif242.github.io/Coding-Quiz/
